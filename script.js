@@ -60,10 +60,16 @@ baloes.forEach(balao => {
 // ===== ANIMAÇÃO DE INICIALIZAÇÃO =====
 window.addEventListener("load", () => {
   const intro = document.getElementById("intro-animation");
+  const video = document.querySelector(".hero-video"); // <— pega o vídeo
+
   setTimeout(() => {
     document.body.classList.add("loaded");
     setTimeout(() => {
       intro.style.display = "none";
+      // 🔧 força o vídeo a tocar novamente
+      if (video && video.paused) {
+        video.play().catch(() => {});
+      }
     }, 800);
   }, 2500); // tempo total da animação antes de desaparecer
 });
