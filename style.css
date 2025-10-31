@@ -302,31 +302,33 @@ body {
 }
 
 .fotos {
-    max-width: 80%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #e6e1e1;
-    border-radius: 10px;
-    text-align: center;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #e6e1e1;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .galeria-imagens {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
 .galeria-imagens img {
-    width: 500px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(80, 79, 79, 0.4);
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(80, 79, 79, 0.4);
+  transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .galeria-imagens img:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .icon {
