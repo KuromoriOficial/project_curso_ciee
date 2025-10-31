@@ -404,3 +404,52 @@ body {
   text-align: center;
   margin-top: 6px;
 }
+
+/* ===== ANIMAÇÃO DE INICIALIZAÇÃO ===== */
+#intro-animation {
+  position: fixed;
+  inset: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  color: #fff;
+}
+
+#intro-animation .bra {
+  color: #f97316; /* Laranja */
+  transform: translateX(100vw);
+  animation: moveBra 2s ease-in-out forwards;
+}
+
+#intro-animation .vus {
+  color: #6d28d9; /* Roxo */
+  transform: translateX(-100vw);
+  animation: moveVus 2s ease-in-out forwards;
+}
+
+@keyframes moveBra {
+  0% { transform: translateX(100vw); }
+  60% { transform: translateX(0); }
+  80% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+@keyframes moveVus {
+  0% { transform: translateX(-100vw); }
+  60% { transform: translateX(0); }
+  80% { transform: translateY(0); }
+  100% { transform: translateY(120vh); opacity: 0; }
+}
+
+/* Transição suave do site depois da vinheta */
+body.loaded #intro-animation {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
