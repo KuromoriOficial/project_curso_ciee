@@ -453,3 +453,10 @@ body.loaded #intro-animation {
   pointer-events: none;
   transition: opacity 0.6s ease;
 }
+
+/* Faz o vídeo continuar rodando por baixo da introdução */
+#intro-animation {
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(4px);
+  pointer-events: none; /* permite o vídeo continuar rodando atrás */
+}
