@@ -390,9 +390,17 @@ body {
   border-radius: 15px;
 }
 
+
+.balao-produto h2 {
+  font-size: 18px;
+  color: #6d28d9;
+  text-align: center;
+  margin: 10px 0 5px 0;
+}
+
 .balao-produto p {
   font-size: 14px;
   color: #333;
-  margin-top: 8px;
   text-align: center;
+  margin-top: 6px;
 }
