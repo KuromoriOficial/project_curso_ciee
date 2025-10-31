@@ -342,3 +342,53 @@ body {
     vertical-align: middle;
     margin-right: 6px;
 }
+
+
+/* === Balões de vendas === */
+#vendas {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#vendas h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#area-vendas {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.balao-produto {
+  position: absolute;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  width: 150px;
+  padding: 10px;
+  cursor: grab;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.balao-produto:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.balao-produto img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.balao-produto p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+}
