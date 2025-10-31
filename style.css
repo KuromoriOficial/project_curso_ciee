@@ -344,37 +344,38 @@ body {
 }
 
 
-/* === Balões de vendas === */
-#vendas {
-  text-align: center;
-  margin: 40px 0;
-}
-
-#vendas h2 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
 #area-vendas {
-  position: relative;
-  width: 100%;
-  height: 60vh;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  overflow: hidden;
   backdrop-filter: blur(5px);
+  scroll-behavior: smooth;
+}
+
+#area-vendas::-webkit-scrollbar {
+  height: 10px;
+}
+
+#area-vendas::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 10px;
 }
 
 .balao-produto {
-  position: absolute;
+  flex: 0 0 auto;
+  width: 180px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  width: 150px;
   padding: 10px;
   cursor: grab;
-  transition: transform 0.2s;
   user-select: none;
+  scroll-snap-align: center;
+  transition: transform 0.2s;
 }
 
 .balao-produto:active {
@@ -391,4 +392,5 @@ body {
   font-size: 14px;
   color: #333;
   margin-top: 8px;
+  text-align: center;
 }
