@@ -454,9 +454,19 @@ body.loaded #intro-animation {
   transition: opacity 0.6s ease;
 }
 
-/* Faz o vídeo continuar rodando por baixo da introdução */
 #intro-animation {
-  background-color: rgba(17, 17, 17, 0.95);
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 17, 17, 0.2); /* antes era 0.95 */
   backdrop-filter: blur(4px);
-  pointer-events: none; /* permite o vídeo continuar rodando atrás */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  color: #fff;
+  pointer-events: none;
 }
