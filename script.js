@@ -55,3 +55,15 @@ baloes.forEach(balao => {
     balao.style.zIndex = '';
   });
 });
+
+
+// ===== ANIMAÇÃO DE INICIALIZAÇÃO =====
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro-animation");
+  setTimeout(() => {
+    document.body.classList.add("loaded");
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 800);
+  }, 2500); // tempo total da animação antes de desaparecer
+});
