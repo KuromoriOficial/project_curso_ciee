@@ -14,3 +14,4 @@ const observer = new IntersectionObserver(entries => {
 });
 
 document.querySelectorAll(".section, .card, .help-card").forEach(el => observer.observe(el));
+
